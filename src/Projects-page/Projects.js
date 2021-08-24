@@ -1,10 +1,11 @@
 import React from 'react';
+import './Projects.css';
 
 const Projects = () => {
     return (
         <section>
-            <div>
-                <h1>Projects Page</h1>
+            <div className='centered'>
+                <h1>Online store</h1>
             </div>
         </section>
     );
