@@ -2,41 +2,47 @@ import React from 'react';
 import {useForm, ValidationError} from "@formspree/react";
 import {Button, TextField} from "@material-ui/core";
 
+import './Contact.css';
 
 function Contact() {
     const [state, handleSubmit] = useForm("mgerpbog");
     if (state.succeeded) {
-        return <p>Thanks for joining!</p>;
+        return <p>I'l contact as soon as I see the message you sent!</p>;
     }
     return (
-        <div className='homePage' style={{ position: 'fixed', textAlign: 'center', border: '2px solid black'}}>
-            <form onSubmit={handleSubmit} className='form-control'>
+        <main>
+        <div className='contactPage'>
+            <div>
+                <h1>If you have any job offers please contact using form below!</h1>
+            </div>
+            <form onSubmit={handleSubmit} >
                 <label htmlFor="email">
 
                 </label>
-                <div>
-                    First name and last name
-                </div>
-                <div>
-                    <TextField
-                        id="outlined-basic" label='Full name' variant='outlined'
+                <div className='formFields'>
+                    <TextField style={{width: '500px'}}
+                        id="outlined-basic"
+                        label='Full name'
+                        variant='outlined'
                         type="text"
                         name="name"
+                        autoComplete='none'
                     />
                     <ValidationError
                         prefix="name"
                         field="name"
                         errors={state.errors}
                     />
+
                 </div>
-                <div>
-                    Email address
-                </div>
-                <div>
-                    <TextField
-                        id="outlined-basic" label='Email address' variant='outlined'
+                <div className='formFields'>
+                    <TextField style={{width: '500px'}}
+                        id="outlined-basic"
+                        label='Email'
+                        variant='outlined'
                         type="email"
                         name="email"
+                        autoComplete='none'
                     />
                     <ValidationError
                         prefix="Email"
@@ -45,16 +51,19 @@ function Contact() {
                     />
                 </div>
                 <div>
-                    Message
-                </div>
-                <div>
-                    <TextField
-                        id="outlined-basic" label='Message' variant='outlined' multiline rows={6}
-                        name="message"
+                    <TextField style={{width: '600px'}}
+                               id="filled-multiline-flexible"
+                               label='Message'
+                               variant='outlined'
+                               multiline
+                               rows={6}
+                               type="Message"
+                               name="Message"
+                               autoComplete='none'
                     />
                     <ValidationError
                         prefix="Message"
-                        field="message"
+                        field="Message"
                         errors={state.errors}
                     />
                 </div>
@@ -66,7 +75,7 @@ function Contact() {
                 </div>
             </form>
         </div>
+        </main>
     );
 }
-
 export default Contact;

@@ -4,7 +4,7 @@ import {FaGithub, FaSteam} from 'react-icons/fa'
 
 const Home = () => {
     return (
-        <section className="section">
+        <main className="section">
             <div className="homePage">
                 <h1>Edvinas Alimas</h1>
                 <h3>Developer & Athlete</h3>
@@ -15,8 +15,13 @@ const Home = () => {
                     <FaSteam id="icon" size={'30px'} style={{padding: '10px 10px 10px 10px'}}/>
                 </a>
             </div>
-        </section>
+            <div>
+
+            </div>
+        </main>
     );
 };
+
+
 
 export default Home;

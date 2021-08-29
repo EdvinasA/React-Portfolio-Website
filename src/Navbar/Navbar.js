@@ -6,6 +6,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         background: 'black',
+        height: 60,
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -19,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Navbar() {
     const classes = useStyles();
     return (
-        <header>
+        <header >
             <AppBar position="static" className={classes.root}>
                 <Toolbar>
                     <Typography variant="h6" className={classes.title}>
