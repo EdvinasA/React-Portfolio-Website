@@ -1,6 +1,6 @@
 import React from 'react';
 import './Projects.css';
-import './Untitled.png';
+import logo from './logo.png';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -13,6 +13,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import {red} from "@material-ui/core/colors";
+import {Grid} from "@material-ui/core";
 
 //
 // const Projects = () => {
@@ -47,12 +48,16 @@ import {red} from "@material-ui/core/colors";
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
-            maxWidth: 345,
+            maxWidth: 400,
             background: red,
+            flexGrow: 1,
         },
         media: {
             height: 0,
             paddingTop: '56.25%', // 16:9
+        },
+        control: {
+          padding: theme.spacing(2),
         },
         expand: {
             transform: 'rotate(0deg)',
@@ -76,12 +81,17 @@ export default function Projects () {
     };
 
     return (
-        <section className='centered'>
+       <Grid style={{paddingTop: '20px'}}
+           container
+           direction="row"
+           justifyContent="space-evenly"
+           alignItems="stretch"
+       >
         <Card className={classes.root}>
             <CardHeader
                 avatar={
                     <Avatar aria-label="Store" className={classes.avatar}>
-                        {/*<img src={'../../public/Untitled.png'} alt={'a'}/>*/}
+                        <img src={logo}/>
                     </Avatar>
                 }
                 title="Digital sales outlet"
@@ -89,7 +99,7 @@ export default function Projects () {
             />
             <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">
-                    This is my own project created to the how much I learned
+                    This is my own project created to see how much I learned
                     during Software Development Academy. My application was hosted on heroku.
                     To create this application I used Angular as front-end and Java Spring boot as back-end and
                     the server to get information from is PostgreSQL
@@ -111,12 +121,11 @@ export default function Projects () {
                 <CardContent>
                     <Typography paragraph></Typography>
                     <Typography paragraph>
-                        In order for the application to fully start, first of all we need to user server link to get it up and
+                        In order for the application to fully start, first of all we need to use server link to get it up and
                         running, so here's the server link: <a href='https://working-store.herokuapp.com/' target='_blank' rel="noreferrer">
                         https://working-store.herokuapp.com/</a>, once that is done you now can
-                        use link to get to login page of the store:<a href='https://working-store.herokuapp.com/' target='_blank' rel="noreferrer">
+                        use link to get to login page of the store:<a href='https://digitalists.herokuapp.com/login' target='_blank' rel="noreferrer">
                         https://digitalists.herokuapp.com/login.</a>
-                        To log in as an user, the login Username is : user and the password is user.
                     </Typography>
                     <Typography paragraph>
                         To log in as an Admin, you can just use Username: admin and the password: admin
@@ -127,8 +136,7 @@ export default function Projects () {
                 </CardContent>
             </Collapse>
         </Card>
-            <img alt="Image" src="/src/Projects-page/Untitled.png"/>
-        </section>
+       </Grid>
     );
 }
 //
