@@ -133,6 +133,12 @@ export default function Projects () {
                     <Typography paragraph>
                         To log in as an user, the login Username is : user and the password is user.
                     </Typography>
+                    <Typography paragraph>
+                        Links to github of back-end:
+                        <a href='https://github.com/EdvinasA/OnlineStore-Java-Back-End'>Github</a>
+                        Links to github of front-end:
+                        <a href='https://github.com/EdvinasA/OnlineStore-Angular'>Github</a>
+                    </Typography>
                 </CardContent>
             </Collapse>
         </Card>
