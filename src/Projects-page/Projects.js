@@ -69,6 +69,11 @@ const useStyles = makeStyles((theme: Theme) =>
         expandOpen: {
             transform: 'rotate(180deg)',
         },
+        avatar: {
+           display: 'flex',
+            height: '60px',
+            width: '60px',
+        },
     }),
 );
 
@@ -81,17 +86,17 @@ export default function Projects () {
     };
 
     return (
-       <Grid style={{paddingTop: '20px'}}
+       <Grid style={{paddingTop: '20px', paddingBottom: '20px'}}
            container
            direction="row"
            justifyContent="space-evenly"
-           alignItems="stretch"
+           alignItems="center"
        >
         <Card className={classes.root}>
             <CardHeader
                 avatar={
                     <Avatar aria-label="Store" className={classes.avatar}>
-                        <img src={logo} alt='Logo'/>
+                        <img src={logo} alt='Logo' style={{height: '60px', width: '60px'}}/>
                     </Avatar>
                 }
                 title="Digital sales outlet"
@@ -102,7 +107,8 @@ export default function Projects () {
                     This is my own project created to see how much I learned
                     during Software Development Academy. My application was hosted on heroku.
                     To create this application I used Angular as front-end and Java Spring boot as back-end and
-                    the server to get information from is PostgreSQL
+                    the server to get information from is PostgreSQL. <br/>
+                    In order to view the application read the text below.
                 </Typography>
             </CardContent>
             <CardActions disableSpacing>
@@ -125,18 +131,25 @@ export default function Projects () {
                         running, so here's the server link: <a href='https://working-store.herokuapp.com/' target='_blank' rel="noreferrer">
                         https://working-store.herokuapp.com/</a>, once that is done you now can
                         use link to get to login page of the store:<a href='https://digitalists.herokuapp.com/login' target='_blank' rel="noreferrer">
-                        https://digitalists.herokuapp.com/login.</a>
+                        https://digitalists.herokuapp.com/login.</a> <br/>
                     </Typography>
                     <Typography paragraph>
-                        To log in as an Admin, you can just use Username: admin and the password: admin
+                        To log in as an Admin, you can just use: <br/>
+                        Username: admin
+                        <br/>
+                        Password: admin
                     </Typography>
                     <Typography paragraph>
-                        To log in as an user, the login Username is : user and the password is user.
+                        To log in as an User, you can just use: <br/>
+                        Username: user
+                        <br/>
+                        Password: user
                     </Typography>
                     <Typography paragraph>
-                        Links to github of back-end:
+                        Link to github of back-end:
                         <a href='https://github.com/EdvinasA/OnlineStore-Java-Back-End'>Github</a>
-                        Links to github of front-end:
+                        <br/>
+                        Link to github of front-end:
                         <a href='https://github.com/EdvinasA/OnlineStore-Angular'>Github</a>
                     </Typography>
                 </CardContent>
