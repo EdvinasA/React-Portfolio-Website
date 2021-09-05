@@ -25,7 +25,7 @@ const Home = () => {
                 <FaGithub id="icon" size={'30px'} style={{padding: '10px 10px 0 10px'}}/>
                 </a>
                 </LightTooltip>
-                <LightTooltip title="Steam account">
+                <LightTooltip title="Steam accounts">
                 <a href={'https://steamcommunity.com/profiles/76561198177315491/'} target={'_blank'} rel="noreferrer">
                     <FaSteam alt="Steam account" id="icon" size={'30px'} style={{padding: '20px 10px 0 10px'}}/>
                 </a>
