@@ -1,0 +1,18 @@
+.change-to-icon {
+    display: none;
+}
+
+.change-from-icon {
+
+}
+
+
+@media only screen and (max-width: 420px) {
+    .change-to-icon {
+        display: inline;
+    }
+
+    .change-from-icon {
+        display: none;
+    }
+}
