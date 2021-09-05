@@ -91,7 +91,7 @@ export default function Projects () {
             <CardHeader
                 avatar={
                     <Avatar aria-label="Store" className={classes.avatar}>
-                        <img src={logo}/>
+                        <img src={logo} alt='Logo'/>
                     </Avatar>
                 }
                 title="Digital sales outlet"
