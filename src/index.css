@@ -13,16 +13,19 @@ html {
   height: 100%;
 }
 
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/*Footer styles*/
 footer {
   position: fixed;
   width: 100%;
   bottom: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
 .lastLine {
   position: relative;
@@ -116,7 +119,18 @@ code {
   }
 
   .source {
-    padding-left: 600px;
+    padding-left:590px;
+  }
+}
+
+@media only screen and (max-width: 864px) {
+  .lastLine {
+    font-size: 9px;
+    height: 29px;
+  }
+
+  .source {
+    padding-left: 550px;
   }
 }
 
@@ -124,6 +138,10 @@ code {
   .lastLine {
     font-size: 9px;
     height: 29px;
+  }
+
+  .source {
+    padding-left: 580px;
   }
 }
 
@@ -137,5 +155,16 @@ code {
     padding-left: 590px;
   }
 }
+
+@media only screen and (max-width: 732px) {
+  .lastLine {
+    font-size: 6px;
+    height: 24px;
+  }
+
+  .source {
+  }
+}
+
 
 
