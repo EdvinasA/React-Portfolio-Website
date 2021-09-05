@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css';
 import {FaGithub, FaSteam} from 'react-icons/fa'
+import { SiGmail } from "react-icons/si";
 import {Tooltip, withStyles} from "@material-ui/core";
 import {Theme} from "@material-ui/core";
 
@@ -29,6 +30,11 @@ const Home = () => {
                 <a href={'https://steamcommunity.com/profiles/76561198177315491/'} target={'_blank'} rel="noreferrer">
                     <FaSteam alt="Steam account" id="icon" size={'30px'} style={{padding: '20px 10px 0 10px'}}/>
                 </a>
+                </LightTooltip>
+                <LightTooltip title="edvinasalimas98@gmail.com">
+                    <a>
+                        <SiGmail id="icon" size={'30px'} style={{padding: '20px 10px 0 10px'}}/>
+                    </a>
                 </LightTooltip>
             </div>
             <div>
