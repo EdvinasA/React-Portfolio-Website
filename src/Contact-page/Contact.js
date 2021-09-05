@@ -20,7 +20,7 @@ function Contact() {
 
                 </label>
                 <div className='formFields'>
-                    <TextField style={{width: '500px'}}
+                    <TextField style={{width: '600px'}}
                         id="outlined-basic"
                         label='Full name'
                         variant='outlined'
@@ -36,7 +36,7 @@ function Contact() {
 
                 </div>
                 <div className='formFields'>
-                    <TextField style={{width: '500px'}}
+                    <TextField style={{width: '600px'}}
                         id="outlined-basic"
                         label='Email'
                         variant='outlined'
